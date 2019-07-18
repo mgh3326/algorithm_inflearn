@@ -1,36 +1,28 @@
 #include<iostream>
 using namespace std;
-int count_arr[50000] = { 0 };
-int find_count(int n) {
-	int count = 2;
-	int temp = 2;
-	int temp_count = 2;
-	if (n == temp)
-	{
-		temp = temp * 2;
-		return temp_count++;
-	}
-	for (int i = 1; i < n / 2; i++)
-	{
-		
-		if (n % (i + 1) == 0)
-		{
-			count++;
-		}
-	}
-	return count;
-}
+
 int main(void)
 
 {
 	int num;
 	scanf("%d", &num);
-	printf("1");
-	for (int i = 1; i < num; i++)
+	int* arr = new int[num]; // 배열 버전 new 연산자를 사용한다. 배열 길이는 상수가 아니여도 된다.
+	for (int i = 0; i < num; i++)
 	{
-		int index = i + 1;
-		printf(" %d", find_count(index));
+		arr[i+1] = 0;
+	}
+	for (int i = 1; i <= num; i++)
+	{
+		for (int j = 1; i*j <= num; j++)
+		{
+			arr[i * j]++;
+		}
 
+	}
+	printf("1");
+	for (int i = 2; i <= num; i++)
+	{
+		printf(" %d",arr[i]);
 	}
 	printf("\n");
 	return 0;
