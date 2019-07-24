@@ -21,20 +21,22 @@ void insertion_sort(int list[], int n) {
 
 void main() {
 	int i;
-	int num = 0;
-	scanf("%d", &num);
+	int cacheNum = 0;
+	int cacheSize = 0;
 
-	int* arr = new int[num];
-	for (int i = 0; i < num; i++)
+	scanf("%d %d", &cacheNum, &cacheNum);
+
+	int* arr = new int[cacheNum];
+	for (int i = 0; i < cacheNum; i++)
 	{
 		scanf("%d", &arr[i]);
 	}
 
 	// 삽입 정렬 수행
-	insertion_sort(arr, num);
+	insertion_sort(arr, cacheNum);
 
 	// 정렬 결과 출력
-	for (i = 0; i < num; i++) {
+	for (i = 0; i < cacheNum; i++) {
 		printf("%d ", arr[i]);
 	}
 }
