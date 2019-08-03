@@ -22,22 +22,54 @@ void insertion_sort(int list[], int n) {
 void main() {
 	int i;
 	int cacheNum = 0;
-	int cacheSize = 0;
+	int workSize = 0;
 
-	scanf("%d %d", &cacheNum, &cacheNum);
-
-	int* arr = new int[cacheNum];
-	for (int i = 0; i < cacheNum; i++)
-	{
-		scanf("%d", &arr[i]);
+	scanf("%d %d", &cacheNum, &workSize);
+	//
+	int* cacheArr = new int[cacheNum];
+	for (int i = 0; i < cacheNum; i++) {
+		cacheArr[i] = 0;
 	}
+	int* workArr = new int[workSize];
+	int temp = 0;
+	int pos = -1;
+	for (int i = 0; i < workSize; i++)
+	{
+		pos = -1;
+		scanf("%d", &temp);
 
-	// 삽입 정렬 수행
-	insertion_sort(arr, cacheNum);
+		for (int j = 0; j < cacheNum; j++) {
+			if (cacheArr[j] == temp)
+			{
+				pos = j;
+				break;
+			}
+		}
+		if (pos == -1) {
+			for (int j = 0; j < cacheNum-1; j++) {
+				cacheArr[cacheNum - j -1] = cacheArr[cacheNum - j - 2];
+			}
+			cacheArr[0] = temp;
+		}
+		else {
+			for (int j = 0; j < pos ; j++) {
+				cacheArr[pos - j] = cacheArr[pos - j - 1];
+			}
+			cacheArr[0] = temp;
+		}
+	}
+	
+	//for (int i = 0; i < workSize; i++)
+	//{
+	//	scanf("%d", &workArr[i]);
+	//}
+
+	//// 삽입 정렬 수행
+	//insertion_sort(cacheArr, cacheNum);
 
 	// 정렬 결과 출력
 	for (i = 0; i < cacheNum; i++) {
-		printf("%d ", arr[i]);
+		printf("%d ", cacheArr[i]);
 	}
 }
 //https://gmlwjd9405.github.io/2018/05/06/algorithm-insertion-sort.html
