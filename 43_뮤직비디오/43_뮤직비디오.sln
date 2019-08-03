@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "43_뮤직비디오", "43_뮤직비디오\43_뮤직비디오.vcxproj", "{B448DD37-7434-40DF-BBFC-1F41DED8452B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B448DD37-7434-40DF-BBFC-1F41DED8452B}.Debug|x64.ActiveCfg = Debug|x64
+		{B448DD37-7434-40DF-BBFC-1F41DED8452B}.Debug|x64.Build.0 = Debug|x64
+		{B448DD37-7434-40DF-BBFC-1F41DED8452B}.Debug|x86.ActiveCfg = Debug|Win32
+		{B448DD37-7434-40DF-BBFC-1F41DED8452B}.Debug|x86.Build.0 = Debug|Win32
+		{B448DD37-7434-40DF-BBFC-1F41DED8452B}.Release|x64.ActiveCfg = Release|x64
+		{B448DD37-7434-40DF-BBFC-1F41DED8452B}.Release|x64.Build.0 = Release|x64
+		{B448DD37-7434-40DF-BBFC-1F41DED8452B}.Release|x86.ActiveCfg = Release|Win32
+		{B448DD37-7434-40DF-BBFC-1F41DED8452B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F6E9DB5-1239-473A-B68B-DD6A215A8721}
+	EndGlobalSection
+EndGlobal
