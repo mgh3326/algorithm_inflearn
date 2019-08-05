@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{3532A4B5-F3C4-4F63-A3FF-A0D9FB168292}</ProjectGuid>
-    <RootNamespace>My49블록의최댓값</RootNamespace>
+    <ProjectGuid>{ACED10F0-8EAD-484F-95F6-D2287DBE1842}</ProjectGuid>
+    <RootNamespace>My51영지선택large</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
