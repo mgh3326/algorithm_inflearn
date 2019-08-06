@@ -11,7 +11,11 @@ int main(void) {
 	string resultStr = "";
 	for (int i = 0; i < num; i++)
 	{
-		scanf("%d", &temp);
+		scanf("%d", &arr[i]);
+	}
+	for (int i = 0; i < num; i++)
+	{
+		temp = arr[i];
 		if (temp > findNum) {
 			if (s.size() == 0)
 			{
@@ -19,24 +23,51 @@ int main(void) {
 				resultStr += "P";
 			}
 			else {
-				if (temp == s.top())
+				if (findNum == s.top())
 				{
-
+					resultStr += "O";
+					s.pop();
+					findNum++;
+					i--;
+					continue;
+				}
+				else if (findNum < s.top())
+				{
+					s.push(temp);
+					resultStr += "P";
 				}
 				else {
-					resultStr = "Impossible";
-					break;
+					resultStr = "impossible";
+					cout << resultStr << endl;
+					return 0;
 				}
 			}
 		}
 		else if (temp < findNum) {
 			//실패 한 경우
-			resultStr = "Impossible";
-			break;
+			resultStr = "impossible";
+			cout << resultStr << endl;
+
+			return 0;
 		}
 		else {
 			resultStr += "PO";
-
+			findNum++;
+		}
+	}
+	while (s.size() != 0)
+	{
+		if (findNum == s.top())
+		{
+			resultStr += "O";
+			s.pop();
+			findNum++;
+			continue;
+		}
+		else {
+			resultStr = "impossible";
+			cout << resultStr << endl;
+			return 0;
 		}
 	}
 	cout << resultStr << endl;
